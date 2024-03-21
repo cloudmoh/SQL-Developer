@@ -1,0 +1,72 @@
+Data Control language; -- DCL;
+
+grant --> used to giving permission.
+revoke --> used to removing permission.
+
+sqlplus sys as sysdba;
+
+create user akram identified by akram; -- to create a user
+
+grant connect,resource to akram; --> to give permission to user.
+
+grant select on table_name to akram;
+
+select * from system.table_name;
+
+grant insert on table_name to akram;
+
+commit; --> manual save because of DML.
+
+grant update on table_name to akram;
+
+grant delete on table_name to akram;
+
+revoke select on table_name from akram;
+
+commit;
+
+revoke all on table_name from akram;
+grant all on table_name to akram;
+
+drop user akram; --> used to drop the user.
+
+TCL --> Transaction control language;
+
+commit
+rollback
+savepoint
+
+those who have manual commit we use these three;
+
+commit: it is used to save the transaction.
+once commited you can not rollback(undo);
+
+the keyword is to commit - 'commit'
+
+rollback --> it is used to rollback(undo) the transaction.
+once commited you can not rollback(undo);
+
+select * from akram_siblings;
+
+insert into akram_siblings values('s7','sios','azwjkin');
+savepoint s1;
+insert into akram_siblings values('jj7a','slls','azlwin');
+savepoint s2;
+insert into akram_siblings values('aj2a','sls','ahzwin');
+
+commit;
+
+rollback to s1;
+
+savepoint --> we can rollback the data in a particular point.
+
+
+
+
+
+
+
+
+
+
+
