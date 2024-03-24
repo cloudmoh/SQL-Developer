@@ -112,6 +112,42 @@ select first_name from employees where department_id = 60
 minus
 select first_name from employees where department_id =90;
 
+Group Functions , Aggregate functions;
+
+select max(salary)from employees;
+select min(salary) from employees;
+select avg(salary) from employees;
+select count(salary) from employees;
+select sum(salary) from employees;
+
+select * from employees;
+
+select max(email),min(hire_date) from employees;
+
+select max(first_name)from employees where salary >= 1000;
+
+select max(hire_date) , min(hire_date) from employees;
+
+select max(salary),department_id from employees group by department_id;
+
+select avg(commission_pct),avg(nvl(commission_pct,0)) from employees;
+
+select count(*) from employees;
+
+select count(5) from employees;
+
+select count(first_name) from employees;
+
+select count(emp_no) from table_a;
+
+select avg(salary) from table_b;
+
+select count(1) from employees where commission_pct is not null;
+
+select * from dept_data;
+
+select avg(nvl(commission_pct,0)) from employees;
+
 
 
 
